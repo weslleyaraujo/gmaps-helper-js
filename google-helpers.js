@@ -92,3 +92,23 @@ function isEmpty(obj) {
     }
     return true;
 }
+
+function onLoadmap() {
+var mapObjmap = document.getElementById("map");
+if (mapObjmap != 'undefined' && mapObjmap != null) {
+        
+    var mapOptionsmap = {
+        zoom: 3,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeControl: true,
+        mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DEFAULT}
+    };
+
+        mapOptionsmap.center = new google.maps.LatLng(
+            -14.235004,
+            -51.925280
+        );
+
+    mapmap = new google.maps.Map(mapObjmap,mapOptionsmap);
+
+}
